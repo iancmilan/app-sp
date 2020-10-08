@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+import PageHeader from '../../components/PageHeader';
+
 import styles from './styles';
 
 function Notifications() {
@@ -13,7 +15,7 @@ function Notifications() {
 
     return (
         <View style={styles.container}>
-            <Text>Notifications</Text>
+            <PageHeader title="Notificações" needGoBackButton={false}/>
             <Button title="Notifications Item" onPress={handleNavigateToNotificationsItemPage}></Button>
         </View>
     );

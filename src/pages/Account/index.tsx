@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
+import PageHeader from '../../components/PageHeader';
+
 import styles from './styles';
 
 function Account() {
     return (
         <View style={styles.container}>
-            <Text>Account</Text>
+            <PageHeader title="Minha conta" needGoBackButton={false}/>
         </View>
     );
 }

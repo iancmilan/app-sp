@@ -8,7 +8,7 @@ const { Navigator, Screen } = createStackNavigator();
 
 function NotificationsStack() {
     return (
-        <Navigator initialRouteName="Notifications">
+        <Navigator initialRouteName="Notifications" screenOptions={{ headerShown: false }}>
             <Screen name="Notifications" component={Notifications}></Screen>
             <Screen name="NotificationsItem" component={NotificationsItem}></Screen>
         </Navigator>

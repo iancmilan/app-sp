@@ -14,11 +14,11 @@ const { Navigator, Screen } = createDrawerNavigator();
 function MenuDrawer() {
     return (
         <NavigationContainer>
-            <Navigator initialRouteName="News" drawerPosition="right">
-                <Screen name="News" component={NewsStack}></Screen>
-                <Screen name="Schedule" component={Schedule}></Screen>
-                <Screen name="Notifications" component={NotificationsStack}></Screen>
-                <Screen name="Account" component={Account}></Screen>
+            <Navigator initialRouteName="News" drawerPosition="right" drawerType="front">
+                <Screen name="News" component={NewsStack} options={{ drawerLabel: "Notícias" }}></Screen>
+                <Screen name="Schedule" component={Schedule} options={{ drawerLabel: "Agenda" }}></Screen>
+                <Screen name="Notifications" component={NotificationsStack} options={{ drawerLabel: "Notificações" }}></Screen>
+                <Screen name="Account" component={Account} options={{ drawerLabel: "Minha conta" }}></Screen>
             </Navigator>
         </NavigationContainer>
     );

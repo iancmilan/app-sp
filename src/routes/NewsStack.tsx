@@ -8,7 +8,7 @@ const { Navigator, Screen } = createStackNavigator();
 
 function NewsStack() {
     return (
-        <Navigator initialRouteName="News">
+        <Navigator initialRouteName="News" screenOptions={{ headerShown: false }}>
             <Screen name="News" component={News}></Screen>
             <Screen name="NewsItem" component={NewsItem}></Screen>
         </Navigator>
