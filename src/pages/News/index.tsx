@@ -1,21 +1,16 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View } from 'react-native';
 
 import PageHeader from '../../components/PageHeader';
 
 import styles from './styles';
+import Items from '../../components/Items';
 
 function News() {
-    const { navigate } = useNavigation();
-
-    function handleNavigateToNewsItemPage() {
-        navigate('NewsItem');
-    }
     return (
         <View style={styles.container}>
             <PageHeader title="Notícias" needGoBackButton={false}/>
-            <Button title="News Item" onPress={handleNavigateToNewsItemPage}></Button>
+            <Items />
         </View>
     );
 }

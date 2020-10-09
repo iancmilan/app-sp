@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import PageHeader from '../../components/PageHeader';
 
 import styles from './styles';
+import Items from '../../components/Items';
 
 function Notifications() {
     const { navigate } = useNavigation();
@@ -16,7 +17,8 @@ function Notifications() {
     return (
         <View style={styles.container}>
             <PageHeader title="Notificações" needGoBackButton={false}/>
-            <Button title="Notifications Item" onPress={handleNavigateToNotificationsItemPage}></Button>
+            <Items />
+            {/* <Button title="Notifications Item" onPress={handleNavigateToNotificationsItemPage}></Button> */}
         </View>
     );
 }
