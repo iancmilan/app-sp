@@ -8,13 +8,18 @@ import Schedule from '../pages/Schedule';
 import NewsStack from './NewsStack';
 import NotificationsStack from './NotificationsStack';
 
-
 const { Navigator, Screen } = createDrawerNavigator();
 
 function MenuDrawer() {
     return (
         <NavigationContainer>
-            <Navigator initialRouteName="News" drawerPosition="right" drawerType="front">
+            <Navigator 
+            initialRouteName="News" 
+            drawerPosition="right" 
+            drawerType="front"
+            drawerContentOptions={{labelStyle: { color: '#FFF' }, style: { backgroundColor: '#353A40', }, activeTintColor: '#FFF'}}
+            drawerStyle={{ width: 180 }}
+            >
                 <Screen name="News" component={NewsStack} options={{ drawerLabel: "Notícias" }}></Screen>
                 <Screen name="Schedule" component={Schedule} options={{ drawerLabel: "Agenda" }}></Screen>
                 <Screen name="Notifications" component={NotificationsStack} options={{ drawerLabel: "Notificações" }}></Screen>
