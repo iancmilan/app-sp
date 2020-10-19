@@ -1,8 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 import PageHeader from '../../components/PageHeader';
 import ScheduleItem from '../../components/ScheduleItem';
+import Date from '../../components/Date';
 
 import styles from './styles';
 
@@ -11,7 +12,12 @@ function Schedule() {
   return (
     <View style={styles.container}>
       <PageHeader title="Agenda" />
-      <ScheduleItem />
+      <ScrollView style={styles.scheduleWrapper}>
+        <Date date="Hoje 20 de outubro"/>
+        <ScheduleItem />
+        <ScheduleItem />
+        <ScheduleItem />
+      </ScrollView>
     </View>
   );
 }
