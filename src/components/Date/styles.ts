@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         borderBottomColor: 'grey',
         borderBottomWidth: 1,
         alignSelf: 'stretch',
-        marginTop: 10,
+        padding: 10,
     },
     day: {
         marginBottom: 10,

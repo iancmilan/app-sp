@@ -4,6 +4,9 @@ const styles = StyleSheet.create({
     container : {
         
     },
+    notificationsWrapper: {
+        padding: 10,
+    }
 });
 
 export default styles;

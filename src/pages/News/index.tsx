@@ -1,24 +1,22 @@
 import React from 'react';
-import { Button, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { ScrollView, View } from 'react-native';
 
 import PageHeader from '../../components/PageHeader';
+import NewsItem from '../../components/NewsItem';
+import Date from '../../components/Date';
 
 import styles from './styles';
-import Items from '../../components/Items';
 
 function News() {
-    const { navigate } = useNavigation();
-
-    function handleNavigateToNewsDetailsPage() {
-        navigate('NewsDetails');
-    }
-    
     return (
         <View style={styles.container}>
             <PageHeader title="Notícias" />
-            {/* <Items /> */}
-            <Button title="News Details" onPress={handleNavigateToNewsDetailsPage}></Button>
+            <ScrollView style={styles.newsWrapper}>
+                <Date date="Hoje 10 de outubro"/>
+                <NewsItem />
+                <NewsItem />
+                <NewsItem />
+            </ScrollView>
         </View>
     );
 }
