@@ -5,12 +5,13 @@ import PageHeader from '../../components/PageHeader';
 
 import styles from './styles';
 
-function NewsItem() {
+function NewsDetails() {
     return (
         <View style={styles.container}>
             <PageHeader title="Notícias" goBackButton={true}/>
+            <Text>News Details</Text>
         </View>
     );
 }
 
-export default NewsItem;
+export default NewsDetails;

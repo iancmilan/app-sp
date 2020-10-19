@@ -5,12 +5,13 @@ import PageHeader from '../../components/PageHeader';
 
 import styles from './styles';
 
-function NotificationsItem() {
+function NotificationDetails() {
     return (
         <View style={styles.container}>
             <PageHeader title="Notificações" goBackButton={true} />
+            <Text>NotificationDetails</Text>
         </View>
     );
 }
 
-export default NotificationsItem;
+export default NotificationDetails;

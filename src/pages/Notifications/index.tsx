@@ -10,15 +10,15 @@ import Items from '../../components/Items';
 function Notifications() {
     const { navigate } = useNavigation();
 
-    function handleNavigateToNotificationsItemPage() {
-        navigate('NotificationsItem');
+    function handleNavigateToNotificationDetailsPage() {
+        navigate('NotificationDetails');
     }
 
     return (
         <View style={styles.container}>
             <PageHeader title="Notificações" />
-            <Items />
-            {/* <Button title="Notifications Item" onPress={handleNavigateToNotificationsItemPage}></Button> */}
+            {/* <Items /> */}
+            <Button title="Notification Details" onPress={handleNavigateToNotificationDetailsPage}></Button>
         </View>
     );
 }
