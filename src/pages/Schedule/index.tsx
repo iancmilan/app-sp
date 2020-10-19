@@ -10,7 +10,7 @@ function Schedule() {
 
   return (
     <View style={styles.container}>
-      <PageHeader title="Agenda" needGoBackButton={false} />
+      <PageHeader title="Agenda" />
       <ScheduleItem />
     </View>
   );

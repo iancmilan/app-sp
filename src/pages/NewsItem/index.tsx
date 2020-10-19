@@ -8,7 +8,7 @@ import styles from './styles';
 function NewsItem() {
     return (
         <View style={styles.container}>
-            <PageHeader title="Notícias" needGoBackButton={true}/>
+            <PageHeader title="Notícias" goBackButton={true}/>
         </View>
     );
 }

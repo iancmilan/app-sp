@@ -8,7 +8,7 @@ import styles from './styles';
 function NotificationsItem() {
     return (
         <View style={styles.container}>
-            <PageHeader title="Notificações" needGoBackButton={true}/>
+            <PageHeader title="Notificações" goBackButton={true} />
         </View>
     );
 }

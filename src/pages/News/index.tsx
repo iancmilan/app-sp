@@ -9,7 +9,7 @@ import Items from '../../components/Items';
 function News() {
     return (
         <View style={styles.container}>
-            <PageHeader title="Notícias" needGoBackButton={false}/>
+            <PageHeader title="Notícias" />
             <Items />
         </View>
     );

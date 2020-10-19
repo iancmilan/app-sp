@@ -8,10 +8,10 @@ import styles from './styles';
 
 interface PageHeaderProps {
     title: string;
-    needGoBackButton: boolean;
+    goBackButton?: boolean;
 }
 
-const PageHeader:React.FC<PageHeaderProps> = ({ title, needGoBackButton }) => {
+const PageHeader:React.FC<PageHeaderProps> = ({ title, goBackButton = false }) => {
     const { goBack, dispatch } = useNavigation();
 
     function handleGoBack() {
@@ -26,7 +26,7 @@ const PageHeader:React.FC<PageHeaderProps> = ({ title, needGoBackButton }) => {
         <View style={styles.container}>
             <View style={styles.header}>
                 {
-                    needGoBackButton?
+                    goBackButton?
                     <BorderlessButton onPress={handleGoBack}>
                         <Feather name="corner-up-left" size={20} color="#FFF" />
                     </BorderlessButton>

@@ -11,7 +11,7 @@ import styles from './styles';
 function Account() {
     return (
         <View style={styles.container}>
-            <PageHeader title="Minha conta" needGoBackButton={false}/>
+            <PageHeader title="Minha conta" />
             <View style={styles.profile}>
                 <Image  style={styles.avatar} source={avatarImg} resizeMode="contain"></Image>
                 <Text style={styles.name}>Nome: Ian Carlos Milan</Text>

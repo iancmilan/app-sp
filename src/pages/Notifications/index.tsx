@@ -16,7 +16,7 @@ function Notifications() {
 
     return (
         <View style={styles.container}>
-            <PageHeader title="Notificações" needGoBackButton={false}/>
+            <PageHeader title="Notificações" />
             <Items />
             {/* <Button title="Notifications Item" onPress={handleNavigateToNotificationsItemPage}></Button> */}
         </View>
