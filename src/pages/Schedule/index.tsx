@@ -3,7 +3,7 @@ import { ScrollView, View } from 'react-native';
 
 import PageHeader from '../../components/PageHeader';
 import ScheduleItem from '../../components/ScheduleItem';
-import Date from '../../components/Date';
+import DateHeader from '../../components/DateHeader';
 
 import styles from './styles';
 
@@ -108,7 +108,7 @@ function Schedule() {
           if(item.content.length > 0){
             return (
               <View key={`${item.date}${index}`}>
-                <Date date={item.date} />
+                <DateHeader date={item.date} />
                 {item.content.map(content => <ScheduleItem key={content._id} content={content} />)}
               </View>
             );

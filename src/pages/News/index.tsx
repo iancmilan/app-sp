@@ -3,7 +3,7 @@ import { ScrollView, View } from 'react-native';
 
 import PageHeader from '../../components/PageHeader';
 import NewsItem from '../../components/NewsItem';
-import Date from '../../components/Date';
+import DateHeader from '../../components/DateHeader';
 
 import styles from './styles';
 
@@ -12,7 +12,7 @@ function News() {
         <View style={styles.container}>
             <PageHeader title="Notícias" />
             <ScrollView style={styles.newsWrapper}>
-                <Date date="Hoje 10 de outubro"/>
+                <DateHeader date="Hoje 10 de outubro"/>
                 <NewsItem />
                 <NewsItem />
                 <NewsItem />

@@ -3,11 +3,11 @@ import { View, Text } from 'react-native';
 
 import styles from './styles';
 
-interface DateProps {
+interface DateHeaderProps {
     date: string;
 }
 
-const Date:React.FC<DateProps> = ({ date }) => {
+const DateHeader:React.FC<DateHeaderProps> = ({ date }) => {
     return (
         <View style={styles.dayWrapper}>
             <Text style={styles.day}>{ date }</Text>
@@ -15,4 +15,4 @@ const Date:React.FC<DateProps> = ({ date }) => {
     );
 }
 
-export default Date;
+export default DateHeader;
