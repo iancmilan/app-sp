@@ -4,7 +4,23 @@ import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
-function NotificationItem() {
+interface NotificationItem {
+    module: {
+        module_id: string,
+        module_name:string,
+    },
+    _id: string,
+    createAt: Date,
+    description: string,
+    identifier: string,
+    url: string,
+}
+
+interface Notification {
+    notification: NotificationItem
+}
+
+const NotificationItem:React.FC<Notification> = ({ notification }) => {
     const { navigate } = useNavigation();
 
     function handleNavigateToNotificationDetailsPage() {
@@ -15,14 +31,8 @@ function NotificationItem() {
         <>
             <TouchableOpacity onPress={handleNavigateToNotificationDetailsPage}>
                 <View style={styles.notificationWrapper}>
-                    <Text style={styles.notificationTitle}>
-                        Título
-                    </Text>
-                    <Text style={styles.notificationSummary}>
-                        Resumo: Google Notícias é um agregador de notícias e 
-                        aplicativo desenvolvido pela Google. Ele apresenta um fluxo 
-                        contínuo e personalizável de artigos organizados a partir de...
-                    </Text>
+                    <Text style={styles.notificationTitle}>{`${notification.createAt.toLocaleDateString()} - ${notification.module.module_name}`}</Text>
+                    <Text style={styles.notificationSummary}>{notification.description}</Text>
                 </View>
             </TouchableOpacity>
         </>
