@@ -9,7 +9,7 @@ import styles from './styles';
 
 interface ScheduleItems {
   month: Array<{
-    date: string;
+    date: Date;
     content: Array<{
       _id: string;
       hour: string;
@@ -17,7 +17,7 @@ interface ScheduleItems {
       color: string;
       processNumber: string;
       expertName: string;
-      expertiseDate: string;
+      expertiseDate: Date;
       place: string;
     }>
   }>;
@@ -28,7 +28,7 @@ function Schedule() {
     {
       month : [
         {
-          date:"2020-01-01T03:00:00.000Z",
+          date: new Date("2020-01-01T03:00:00.000Z"),
           content:[
             {
               _id:"5f7378933e2c9f63ee7c83dd",
@@ -37,7 +37,7 @@ function Schedule() {
               color: "#fcb900",
               processNumber:"85598772452441",
               expertName: 'Ian',
-              expertiseDate: '2020-01-01T03:00:00.000Z',
+              expertiseDate: new Date('2020-01-01T03:00:00.000Z'),
               place: 'Empresa',
             },
             {
@@ -47,13 +47,13 @@ function Schedule() {
               color: "#fcb900",
               processNumber:"855987724541",
               expertName: 'Gustavo',
-              expertiseDate: '2020-01-01T03:00:00.000Z',
+              expertiseDate: new Date('2020-01-01T03:00:00.000Z'),
               place: 'Comarca',
             }
           ]
         },
         {
-          date:"2020-01-02T03:00:00.000Z",
+          date: new Date("2020-01-02T03:00:00.000Z"),
           content:[
             {
                 _id:"5f73787f3e2c9f63ee7c83d9",
@@ -62,25 +62,25 @@ function Schedule() {
                 color: "#fcb900",
                 processNumber:"855987741",
                 expertName: 'Ian',
-                expertiseDate: '2020-01-02T03:00:00.000Z',
+                expertiseDate: new Date('2020-01-02T03:00:00.000Z'),
                 place: 'Delegacia',
             }
           ]
         },
         {
-          date:"2020-01-03T03:00:00.000Z",
+          date: new Date("2020-01-03T03:00:00.000Z"),
           content:[],
         },
         {
-          date:"2020-01-04T03:00:00.000Z",
+          date: new Date("2020-01-04T03:00:00.000Z"),
           content:[],
         },
         {
-          date:"2020-01-05T03:00:00.000Z",
+          date: new Date("2020-01-05T03:00:00.000Z"),
           content:[],
         },
         {
-          date:"2020-01-06T03:00:00.000Z",
+          date: new Date("2020-01-06T03:00:00.000Z"),
           content:[
             {
               _id:"5f737874867g9f63ee7c83d9",
@@ -89,7 +89,7 @@ function Schedule() {
               color: "#fcb900",
               processNumber:"855294841",
               expertName: 'Gustavo',
-              expertiseDate: '2020-01-06T03:00:00.000Z',
+              expertiseDate: new Date('2020-01-06T03:00:00.000Z'),
               place: 'Unochapecó',
             }
           ],
@@ -108,7 +108,13 @@ function Schedule() {
           if(item.content.length > 0){
             return (
               <View key={`${item.date}${index}`}>
-                <DateHeader date={item.date} />
+                <DateHeader date={
+                  new Intl.DateTimeFormat("pt-BR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "2-digit"
+                  }).format(item.date)
+                } />
                 {item.content.map(content => <ScheduleItem key={content._id} content={content} />)}
               </View>
             );
