@@ -93,13 +93,63 @@ function Schedule() {
               place: 'Unochapecó',
             }
           ],
+        },
+        {
+          date: new Date("2020-10-26T03:00:00.000Z"),
+          content:[
+            {
+              _id:"5f737874867g93dsee7c83d9",
+              hour:"19:00",
+              status:"Aguardando",
+              color: "#fcb900",
+              processNumber:"855294841",
+              expertName: 'Gustavo',
+              expertiseDate: new Date('2020-01-06T03:00:00.000Z'),
+              place: 'Unochapecó',
+            }
+          ],
+        },
+        {
+          date: new Date("2020-10-27T03:00:00.000Z"),
+          content:[
+            {
+              _id:"5f737874867desdsee7c83d9",
+              hour:"19:00",
+              status:"Aguardando",
+              color: "#fcb900",
+              processNumber:"855294841",
+              expertName: 'Gustavo',
+              expertiseDate: new Date('2020-01-06T03:00:00.000Z'),
+              place: 'Unochapecó',
+            }
+          ],
+        },
+        {
+          date: new Date("2020-10-30T03:00:00.000Z"),
+          content:[
+            {
+              _id:"5f737321867desdsee7c83d9",
+              hour:"19:00",
+              status:"Aguardando",
+              color: "#fcb900",
+              processNumber:"855294841",
+              expertName: 'Gustavo',
+              expertiseDate: new Date('2020-01-06T03:00:00.000Z'),
+              place: 'Unochapecó',
+            }
+          ],
         }
       ]
     }
   );
 
-  console.log(schedule)
-
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate()+1);
+  tomorrow.setHours(0,0,0,0);
+  
   return (
     <View style={styles.container}>
       <PageHeader title="Agenda" />
@@ -108,13 +158,13 @@ function Schedule() {
           if(item.content.length > 0){
             return (
               <View key={`${item.date}${index}`}>
-                <DateHeader date={
+                <DateHeader date={`${today.getTime() == item.date.getTime() ? "Hoje" : ''}${tomorrow.getTime() == item.date.getTime() ? "Amanhã" : ''} ${
                   new Intl.DateTimeFormat("pt-BR", {
                     year: "numeric",
                     month: "long",
                     day: "2-digit"
                   }).format(item.date)
-                } />
+                }`} />
                 {item.content.map(content => <ScheduleItem key={content._id} content={content} />)}
               </View>
             );

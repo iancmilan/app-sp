@@ -14,12 +14,14 @@ function News() {
         <View style={styles.container}>
             <PageHeader title="Notícias" />
             <ScrollView style={styles.newsWrapper}>
-                <DateHeader date={
-                  new Intl.DateTimeFormat("pt-BR", {
+                {/* Na comparação today.getTime mudar para o o item que contem a data dentro do laço de repetição, como exemplo pode olhar o arquivo Schedule/index.tsx na linha 161 */}
+                <DateHeader date={`${today.getTime() == today.getTime() ? "Hoje" : ''} ${
+                    new Intl.DateTimeFormat("pt-BR", {
                     year: "numeric",
                     month: "long",
                     day: "2-digit"
-                  }).format(today)}/>
+                  }).format(today)
+                }`}/>
                 <NewsItem />
                 <NewsItem />
                 <NewsItem />
