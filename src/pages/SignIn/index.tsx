@@ -7,6 +7,7 @@ import { useAuth } from '../../contexts/auth';
 import logoImg from '../../assets/Logo.png';
 
 import styles from './styles';
+import PageHeader from '../../components/PageHeader';
 
 function SignIn() {
     const { signed, signIn } = useAuth();
@@ -19,36 +20,39 @@ function SignIn() {
     
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <View style={styles.logoContainer}>
-                <Image style={styles.logoImg} source={logoImg} />
-            </View>
-            <View style={styles.loginContainer}>
-                <TextInput
-                    style={styles.input}
-                    value={email}
-                    onChangeText={text => setEmail(text)}
-                    placeholder="E-mail"
-                    placeholderTextColor="#000"
-                />
-                <TextInput
-                    style={styles.input}
-                    value={password}
-                    secureTextEntry={true}
-                    onChangeText={text => setPassword(text)}
-                    placeholder="Senha"
-                    placeholderTextColor="#000"
-                />
-                <RectButton style={styles.buttonLogin} onPress={handleSingIn}>
-                    <Text style={styles.buttonLoginText}>
-                        Entrar
+            <PageHeader title="Login" />
+            <View style={styles.teste}>
+                <View style={styles.logoContainer}>
+                    <Image style={styles.logoImg} source={logoImg} />
+                </View>
+                <View style={styles.loginContainer}>
+                    <TextInput
+                        style={styles.input}
+                        value={email}
+                        onChangeText={text => setEmail(text)}
+                        placeholder="E-mail"
+                        placeholderTextColor="#000"
+                    />
+                    <TextInput
+                        style={styles.input}
+                        value={password}
+                        secureTextEntry={true}
+                        onChangeText={text => setPassword(text)}
+                        placeholder="Senha"
+                        placeholderTextColor="#000"
+                    />
+                    <RectButton style={styles.buttonLogin} onPress={handleSingIn}>
+                        <Text style={styles.buttonLoginText}>
+                            Entrar
+                        </Text>
+                    </RectButton>
+                </View>
+                <BorderlessButton style={styles.buttonCreateAccount}>
+                    <Text style={styles.buttonCreateAccountText}>
+                        Criar conta
                     </Text>
-                </RectButton>
+                </BorderlessButton>
             </View>
-            <BorderlessButton style={styles.buttonCreateAccount}>
-                <Text style={styles.buttonCreateAccountText}>
-                    Criar conta
-                </Text>
-            </BorderlessButton>
         </KeyboardAvoidingView>
     );
 }
