@@ -2,9 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import Account from '../pages/Account';
-import Schedule from '../pages/Schedule';
-
 import NewsStack from './NewsStack';
 import NotificationsStack from './NotificationsStack';
 import SignInRequired from './SignInRequired';
@@ -27,7 +24,7 @@ function MenuDrawer() {
                     <Screen name="News" component={NewsStack} options={{ drawerLabel: "Notícias" }}></Screen>
                     <Screen name="Schedule" component={SignInRequired} options={{ drawerLabel: "Agenda" }}></Screen>
                     <Screen name="Notifications" component={NotificationsStack} options={{ drawerLabel: "Notificações" }}></Screen>
-                    <Screen name="Account" component={Account} options={{ drawerLabel: "Minha conta" }}></Screen>
+                    <Screen name="Account" component={SignInRequired} options={{ drawerLabel: "Minha conta" }}></Screen>
                 </Navigator>
             </AuthProvider>
         </NavigationContainer>

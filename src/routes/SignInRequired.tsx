@@ -1,15 +1,24 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { useRoute } from '@react-navigation/native';
+
+import Schedule from '../pages/Schedule';
+import Account from '../pages/Account';
 
 import { useAuth } from '../contexts/auth';
-
 import AuthRoutes from './AuthRoutes';
-import Schedule from '../pages/Schedule';
 
 function SignInRequired() {
+    const route = useRoute();
+
     const { signed } = useAuth();
 
-    return signed ? <Schedule /> : <AuthRoutes />;
+    if (signed && route.name == "Schedule") {
+        return <Schedule />;
+    } else if (signed && route.name == "Account"){
+        return <Account />;
+    } else {
+        return <AuthRoutes />;
+    }
 }
 
 export default SignInRequired;
