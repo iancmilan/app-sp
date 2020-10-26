@@ -8,11 +8,18 @@ import DateHeader from '../../components/DateHeader';
 import styles from './styles';
 
 function News() {
+    const today = new Date();
+    
     return (
         <View style={styles.container}>
             <PageHeader title="Notícias" />
             <ScrollView style={styles.newsWrapper}>
-                <DateHeader date="Hoje 10 de outubro"/>
+                <DateHeader date={
+                  new Intl.DateTimeFormat("pt-BR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "2-digit"
+                  }).format(today)}/>
                 <NewsItem />
                 <NewsItem />
                 <NewsItem />
