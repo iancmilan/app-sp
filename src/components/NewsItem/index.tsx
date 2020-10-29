@@ -4,25 +4,29 @@ import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
-function NewsItem() {
+interface NewsItem {
+    _id: string;
+    title: string;
+    summary: string;
+}
+
+interface News {
+    news: NewsItem;
+}
+
+const NewsItem:React.FC<News> = ({ news }) => {
     const { navigate } = useNavigation();
 
-    function handleNavigateToNewsDetailsPage() {
-        navigate('NewsDetails');
+    function handleNavigateToNewsDetailsPage(id: string) {
+        navigate('NewsDetails', { id });
     }
         
     return (
         <>
-            <TouchableOpacity onPress={handleNavigateToNewsDetailsPage}>
+            <TouchableOpacity onPress={() => handleNavigateToNewsDetailsPage(news._id)}>
                 <View style={styles.newsWrapper}>
-                    <Text style={styles.newsTitle}>
-                        Título
-                    </Text>
-                    <Text style={styles.newsSummary}>
-                        Resumo: Google Notícias é um agregador de notícias e 
-                        aplicativo desenvolvido pela Google. Ele apresenta um fluxo 
-                        contínuo e personalizável de artigos organizados a partir de...
-                    </Text>
+                    <Text style={styles.newsTitle}>{news.title}</Text>
+                    <Text style={styles.newsSummary}>{news.summary}</Text>
                 </View>
             </TouchableOpacity>
         </>
