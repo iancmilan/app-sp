@@ -23,13 +23,13 @@ interface Notification {
 const NotificationItem:React.FC<Notification> = ({ notification }) => {
     const { navigate } = useNavigation();
 
-    function handleNavigateToNotificationDetailsPage() {
-        navigate('NotificationDetails');
+    function handleNavigateToNotificationDetailsPage(id: string) {
+        navigate('NotificationDetails', { id });
     }
         
     return (
         <>
-            <TouchableOpacity onPress={handleNavigateToNotificationDetailsPage}>
+            <TouchableOpacity onPress={() => handleNavigateToNotificationDetailsPage(notification._id)}>
                 <View style={styles.notificationWrapper}>
                     <Text style={styles.notificationTitle}>{`${notification.createAt.toLocaleDateString()} - ${notification.module.module_name}`}</Text>
                     <Text style={styles.notificationSummary}>{notification.description}</Text>
