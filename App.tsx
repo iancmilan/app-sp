@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <MenuDrawer />
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </>
   );
 }
