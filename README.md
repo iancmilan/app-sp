@@ -6,6 +6,8 @@
 
 </div>
 
+### :construction_worker::construction: Em construção :construction_worker::construction:
+
 <!-- Bagdes -->
 [mobile]: https://img.shields.io/badge/mobile-React%20Native-63DAFA?style=flat-square
 [top_language]: https://img.shields.io/github/languages/top/iancmilan/app-sp?style=flat-square
