@@ -4,13 +4,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    teste: {
+    containerLogin: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
     },
     logoContainer: {
-        marginBottom: 20,
+        marginBottom: 10,
     },
     logoImg: {
         width: 200,
