@@ -2,7 +2,7 @@
 
 ![mobile] ![top_language] ![repo-size]
 
-### 🕵️‍♂️ Aplicativo que está sendo desenvolvido durante a disciplina Prática Profissional II, utilizando a tecnologia React Native.
+### 🕵️‍♂️ Aplicativo desenvolvido durante a disciplina Prática Profissional II, utilizando a tecnologia React Native.
 
 </div>
 
