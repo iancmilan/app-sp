@@ -21,20 +21,19 @@ No projeto da prática profissional precisei seguir um cronograma e registrar os
 * Nos 4 dias dessa atividade o foco foi entender os três principais conceitos do React;
 * Componentização;
 * Propriedade;
-* Estado;
+* Estado.
 
 #### Desenvolvimento dos wireframes
 
 * Utilizei a ferramenta MarvelApp;
 * Por motivos de contrato não é possível divulgar o nome da empresa;
-* Com base nisso foi utilizado nome e logo fictícios;
-* Falar cada uma das telas;
+* Com base nisso foi utilizado nome e logo fictícios.
 
 #### Estrutura e rotas
 
 * Foram utilizados dois tipos de navegação;
 * Drawer Navigation(Menu);
-* Stack Navigation(Navegação em pilha);
+* Stack Navigation(Navegação em pilha).
 
 #### Componente Header
 
@@ -44,7 +43,7 @@ No projeto da prática profissional precisei seguir um cronograma e registrar os
 * Como o Header se repete em todas as páginas da aplicação é valido a criação desse componente;
 * Também foi utilizado o conceito de propriedade;
 * Propriedade é o conceito de enviarmos informações de um componente pai para um componente filho;
-* Nesse caso enviamos o título de cada página por meio de propriedades;
+* Nesse caso enviamos o título de cada página por meio de propriedades.
 
 #### Componentes DateHeader, NewsItem, ScheduleItem e NotificationItem
 
@@ -53,13 +52,13 @@ No projeto da prática profissional precisei seguir um cronograma e registrar os
 * NewsItem é cada item das notícias;
 * ScheduleItem é cada item da agenda;
 * NotificationItem é cada item das notificações;
-* Nessa atividade também foi mudada a cor da DrawerNavigation;
+* Nessa atividade também foi mudada a cor da DrawerNavigation.
 
 #### Autenticação
 
 * Uma das regras de negócio do aplicativo é exigir que o usuário esteja logado para acessar as telas de agenda e minha conta;
 * Para a autenticação foi utilizado a ContextApi e os Hooks do React Native;
-* Também foi utilizada a AsyncStorage pra guardar informações da memória do dispositivo;
+* Também foi utilizada a AsyncStorage pra guardar informações da memória do dispositivo.
 
 ## :rocket: Tecnologias
 
