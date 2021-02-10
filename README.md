@@ -61,11 +61,20 @@ No projeto da prática profissional precisei seguir um cronograma e registrar os
 * Para a autenticação foi utilizado a ContextApi e os Hooks do React Native;
 * Também foi utilizada a AsyncStorage pra guardar informações da memória do dispositivo;
 
+## :rocket: Tecnologias
+
+O projeto foi desenvolvido com as seguintes tecnologias:
+
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
+
 ## :computer: Wireframes do aplicativo
 
+Obs: Logo e nome usados no aplicativo e wireframes são fictícios por motivos de contrato com a empresa.
+
 <p align="center">
-  <img alt="Wireframe1" title="Login" src=".github/wireframe1.png" width="450px">
-  <img alt="Wireframe2" title="Login" src=".github/wireframe2.png" width="450px">
+  <img alt="Wireframe1" title="Login" src=".github/wireframe1.png" width="400px">
+  <img alt="Wireframe2" title="Login" src=".github/wireframe2.png" width="400px">
 </p>
 
 ## :iphone: Resultado final
