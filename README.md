@@ -1,5 +1,6 @@
 <div align="center">
-
+  
+![Project Image](.github/appsp.png)
 ![mobile] ![top_language] ![repo-size]
 
 ### 🕵️‍♂️ Aplicativo desenvolvido durante a disciplina Prática Profissional II, utilizando a tecnologia React Native.
@@ -81,6 +82,6 @@ Obs: Logo e nome usados no aplicativo e wireframes são fictícios por motivos d
 [![Resultado final](https://i.imgur.com/Jw9ugz4.png)](https://youtu.be/64GI-Q5ZItU)
 
 <!-- Bagdes -->
-[mobile]: https://img.shields.io/badge/mobile-React%20Native-63DAFA?style=flat-square
-[top_language]: https://img.shields.io/github/languages/top/iancmilan/app-sp?style=flat-square
-[repo-size]: https://img.shields.io/github/repo-size/iancmilan/app-sp?style=flat-square
+[mobile]: https://img.shields.io/badge/mobile-React%20Native-e5e5e5?style=flat-square&labelColor=121214
+[top_language]: https://img.shields.io/github/languages/top/iancmilan/app-sp?style=flat-square&color=e5e5e5&labelColor=121214
+[repo-size]: https://img.shields.io/github/repo-size/iancmilan/app-sp?style=flat-square&color=e5e5e5&labelColor=121214
